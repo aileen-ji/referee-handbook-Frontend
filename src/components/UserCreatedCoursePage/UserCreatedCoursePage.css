@@ -1,9 +1,12 @@
-.user-create-course {
+
+
+
+.user-content {
     background-color: #1F1F1F;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    align-items: center;
 }
 
 
@@ -13,15 +16,13 @@
 
 .main-user-content, .tips-and-tricks {
     background: #F8F8F8;
-    
-    width: 90vw;
-    margin-left: 5%;
-    border-radius: 10px;
-    margin-top: 5px;
-
     word-wrap: break-word;
+
+    width: 90vw;
+    border-radius: 10px;
 }
 
+/* Beginning of course specific information  */
 .created-by {
     display: flex;
     padding: 10px;
@@ -30,62 +31,57 @@
     display: grid;
 }
 
-.created-subtitle{
+.course-information{
     display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    margin-left: 4vw;
 }
 
 .cb-title {
-    margin-left: 50px;
-    font-size: 60px;
+    font-size: 3em;
     font-family: 'Montserrat';
     font-weight: 800;
 }
 .cb-username {
-    margin-left: 50px;
     font-family: 'Cormorant';
+    font-size: 2em;
 }
 
 .cb-date {
-    font-size: 20px;
-    margin-left: 16%;
+    font-size: 1em;
     opacity: 50%;
 }
 
+/* Beginning of text content  */
+
 .short-description, .long-description {
-    margin-left: 60px;
-    
-    margin-right: 60px;
-    font-size: x-large;
     font-family: 'Cormorant';
+    margin-left: 4vw;
 }
 
-.short-description p {
-    font-size: 35px;
+.short-description {
+    font-size: 2em;
     font-weight: 100;
-    margin-top: 40px;
-    margin-bottom: 40px;
-
+    margin-top: 4vh;
+    margin-bottom: 4vh;
     opacity: 70%;
-
-    margin-left: 100px;
-    margin-right: 100px;
-    
 }
-
 /* ---------------------------- Markdown manipulation for proper rendering ------------------------------- */
 
-.long-description {
+.long-description, .tips-and-tricks-text {
     white-space: pre-wrap;
-    font-size: 30px;
+    font-size: 1.5em;
+    max-width: 80vw;
 }
 
-.long-description img {
+.long-description img, .tips-and-tricks-text img {
     max-width: 40vw;
 
 }
 
-.long-description ul {
-    padding-left: 40px;
+.long-description ul, .tips-and-tricks-text ul {
+    padding-left: 2vw;
 }
 
 /* ---------------------------------- Line breaks ------------------------------------ */
@@ -108,41 +104,37 @@
     display: flex;
     width: 90vw;
     justify-content: center;
-    border-radius: 10px;
-
-    margin-left: 75px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    border-radius: 30%;
     
-    padding-top: 50px;
-    padding-bottom: 50px;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }
 
 .video-container iframe {
     border: 10px solid ;
     border-color: rgba(240, 240, 206, 0.686);
-    border-radius: 25px;
+    border-radius: 5%;
+    max-width: 80%;
 }
 
 /* ---------------------------------- Further Tips and tricks styling ------------------------------------ */
 .tips-and-tricks {
-    margin-bottom: 30px;
+    margin-bottom: 5vh;
+    max-height: 50vh;
+    overflow-y: auto;
 }
-.tips-and-tricks h2 {
-    margin-left: 70px;
-    font-size: 60px;
+.tips-and-tricks-title {
+    margin-left: 4vw;
+    font-size: 3em;
     font-family: 'Montserrat';
-    font-weight: 800;
-    padding-bottom: 5px;
-
 }
 
-.tips-and-tricks p {
-    margin-left: 70px;
-    margin-top: 50px;
-    padding-bottom: 50px;
-    font-size: 40px;
-    white-space: pre-line;
-    
+.tips-and-tricks-text {
     font-family: 'Cormorant';
+    font-size: 1.5em;
+    white-space: pre-line;
+    max-width: 80vw;
+    margin-left: 4vw;
 }

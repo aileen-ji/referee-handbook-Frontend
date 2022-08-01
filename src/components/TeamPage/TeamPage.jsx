@@ -18,7 +18,7 @@ import { ArrowBack } from '@mui/icons-material';
 function TeamPage() {
 
   // uncomment this line to use api
-  const {league, team, loadingTeam, getTeam, loadingStats, getStats, stats, error, setError, getTeamGames} = useHomeContext()
+  const {league, team, loadingTeam, getTeam, loadingStats, getStats, stats, error, setError, getTeamGames, limit} = useHomeContext()
 
   // temporary hardcode data for testing
 //   const loadingTeam = false;
@@ -68,7 +68,7 @@ function TeamPage() {
 
   const handleOnReturn = async() => {
     
-    navigate("/home")
+    navigate("/sports")
   }
 
   return (
@@ -77,6 +77,8 @@ function TeamPage() {
         <Button className="create-course-btn"  variant="contained" size="large"  endIcon={<ArrowBack/>} onClick={handleOnReturn} shrink="false" sx={{ color: 'black',  height:"6ch", fontSize:"16px", backgroundColor: 'whitesmoke', ':hover' :{ bgcolor: 'gray', color: 'white'} }} >Return</Button>
       <Button className="create-course-btn"  variant="contained" size="large"  endIcon={<BookmarkIcon/>} onClick={handleOnFollow} shrink="false" sx={{ color: 'black',  height:"6ch", fontSize:"16px", backgroundColor: 'whitesmoke', ':hover' :{ bgcolor: 'gray', color: 'white'} }} >Follow</Button>
       </div>
+      {limit ? (<h3>Uh oh! The sports API is at its limit. Try refreshing or come back in a minute.</h3>) : (
+      <>
       {team == null ? <h3>Loading team...</h3> : <div className='team-page-header'>
       <img className='team-page-logo' src={team.logo}></img>
       <div className='team-page-title'><h1 className='team-page-name'>{team.name}</h1>
@@ -89,9 +91,8 @@ function TeamPage() {
         <p>Total: {stats.played.all} •&nbsp;</p>
         <p>{stats.wins.all.total}W {stats.loses.all.total}L </p>    
       </div>}
-      <h2 className='recent-games-title'>Recent Games</h2>
       <TeamGamesGrid />
-      
+      </>)}
       
     </div>
   )

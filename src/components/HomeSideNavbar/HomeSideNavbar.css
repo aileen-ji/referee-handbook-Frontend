@@ -25,6 +25,7 @@
 
 .home-side-navbar button:hover{
     background-color: white;
+    cursor: pointer;
 }
 
 .home-side-navbar .active{

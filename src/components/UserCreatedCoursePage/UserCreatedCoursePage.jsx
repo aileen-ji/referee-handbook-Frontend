@@ -43,61 +43,63 @@ function UserCreatedCoursePage() {
                 { currentCourse ? <LearningSubBanner courseName={currentSport.sport_name} showButtons="true"/> : null} 
             </div>
 
-            {/* Render chunk of user created course content  */}
-            <div className='main-user-content'>
+            <div className='user-content'>
+                {/* Render chunk of user created course content  */}
+                <div className='main-user-content'>
 
-                {/* Title and date */}
-                <span className='created-by'>
-                    <span className='created-subtitle'>
+                    {/* Title and date */}
+                    <span className='course-information'>
                         <h3 className='cb-title'>{currentCourse.course_title}</h3>
-                        <h3 className='cb-date'>{condensedDate}</h3>
-                    </span>
                         <h3 className='cb-username'>Created by {currentCourse.username}</h3>
-                </span>
+                        <h3 className='cb-date'>Created on {condensedDate}</h3>
+                    </span>
 
-                {/* Line separator */}
-                <span className='line-break'>
-                    <hr style={{
-                        height: 1.5,
-                        borderColor : '#000000'
-                    }}/>
-                </span>
+                    {/* Line separator */}
+                    <span className='line-break'>
+                        <hr style={{
+                            height: 1.5,
+                            borderColor : '#000000'
+                        }}/>
+                    </span>
 
-                {/* Course content descriptions, both short and long */}
-                <section className='short-description'>
-                    <p>{currentCourse.course_short_description}</p>
-                </section>
-                <section className='long-description'>
-                    <ReactMarkdown>{currentCourse.course_content}</ReactMarkdown>
-                </section>
-            </div>
+                    {/* Course content descriptions, both short and long */}
+                    <section className='short-description'>
+                        <p>{currentCourse.course_short_description}</p>
+                    </section>
+                    <section className='long-description'>
+                        <ReactMarkdown>{currentCourse.course_content}</ReactMarkdown>
+                    </section>
+                </div>
 
-            {/* Renders youtube video onto the screen IF it contains a video code */}
-            <div className='video-container'>
-                {acceptableFormat ? <iframe
-                    src={ourUrl}
-                    width="750"
-                    height="400"
-                    allowFullScreen
-                /> : <h2>Please input an appropriate youtube link</h2>}
-            </div>
-            
-            {/* Renders tips and tricks section  */}
-            <div className='tips-and-tricks'>
-
-                {/* Title  */}
-                <h2 className='tips-and-tricks-title'>{'Tips & Tricks'}</h2>
-
-                {/* Line separator */}
-                <span className='line-break'>
-                    <hr style={{
-                        height: 1.5,
-                        borderColor : '#000000'
-                    }}/>
-                </span>
+                {/* Renders youtube video onto the screen IF it contains a video code */}
+                <div className='video-container'>
+                    {acceptableFormat ? <iframe
+                        src={ourUrl}
+                        width="750"
+                        height="400"
+                        allowFullScreen
+                    /> : <h2>Please input an appropriate youtube link</h2>}
+                </div>
                 
-                {/* Tips and tricks text section */}
-                <p className='tips-and-tricks-text'>{currentCourse.course_tips_tricks}</p>
+                {/* Renders tips and tricks section  */}
+                <div className='tips-and-tricks'>
+
+                    {/* Title  */}
+                    <h2 className='tips-and-tricks-title'>{'Tips & Tricks'}</h2>
+
+                    {/* Line separator */}
+                    <span className='line-break'>
+                        <hr style={{
+                            height: 1.5,
+                            borderColor : '#000000'
+                        }}/>
+                    </span>
+                    
+                    {/* Tips and tricks text section */}
+                    <div className='tips-and-tricks-text'>
+                        <ReactMarkdown>{currentCourse.course_tips_tricks}</ReactMarkdown>
+                    </div>
+                </div>
             </div>
         </div>
     )

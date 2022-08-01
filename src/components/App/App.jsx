@@ -56,8 +56,8 @@ function App() {
             <Route path="/learning/:sportsName/create" element={<ProtectedRoute element = {<CreateCourseForm/>}/>} />
             <Route path="/learning/:sportsName/beginner" element={<BeginnerCoursePage/>} />
             <Route path="/learning/:sportsName/userCreated/:sportsId" element={<UserCreatedCoursePage/>} />
-            <Route path="/home" element={<HomePage/>}/>
-            <Route path="/home/:sportName/:teamId" element={<TeamPage/>}/>
+            <Route path="/sports" element={<HomePage/>}/>
+            <Route path="/sports/:sportName/:teamId" element={<TeamPage/>}/>
             <Route path="*" element={<NotFound/>} />
           </Routes>
           <Footer/>

@@ -48,32 +48,74 @@
 }
 
 .hockey{
-    background: url("https://thumbs.dreamstime.com/b/hockey-rink-field-ice-arena-nhl-winter-sport-game-pitch-top-view-stadium-graphic-line-diagram-outline-background-234758928.jpg");
-    background-position:center;
+    background:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.1), 
+      rgba(0, 0, 0, 0.5)
+    ),
+    /* bottom, image */
+    url(https://thumbs.dreamstime.com/b/hockey-rink-field-ice-arena-nhl-winter-sport-game-pitch-top-view-stadium-graphic-line-diagram-outline-background-234758928.jpg);
+    background-position: center;
 }
 
 .volleyball{
-    background: url("https://media.istockphoto.com/illustrations/imitation-of-a-sports-volleyball-court-illustration-id1206467969?k=20&m=1206467969&s=612x612&w=0&h=VcC5e2hbXbeBkLCgBfv7FW_uJzaRTxIlpLND_kc4Ry0=");
+        background:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.1), 
+      rgba(0, 0, 0, 0.5)
+    ),
+    /* bottom, image */
+    url("https://media.istockphoto.com/illustrations/imitation-of-a-sports-volleyball-court-illustration-id1206467969?k=20&m=1206467969&s=612x612&w=0&h=VcC5e2hbXbeBkLCgBfv7FW_uJzaRTxIlpLND_kc4Ry0=");
     background-position: center;
 }
 
 .rugby{
-    background: url("https://openclipart.org/download/247666/RugbyUnionPitch.svg");
+        background:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.1), 
+      rgba(0, 0, 0, 0.5)
+    ),
+    /* bottom, image */
+    url("https://openclipart.org/download/247666/RugbyUnionPitch.svg");
     background-position: center;
 }
 
 .soccer{
-    background: url("https://upload.wikimedia.org/wikipedia/commons/b/b9/Soccer_field_-_empty.svg");
+        background:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.1), 
+      rgba(0, 0, 0, 0.5)
+    ),
+    /* bottom, image */
+    url("https://upload.wikimedia.org/wikipedia/commons/b/b9/Soccer_field_-_empty.svg");
     background-position: center;
 }
 
 .basketball{
-    background: url("https://upload.wikimedia.org/wikipedia/commons/c/c1/Basketball_court_1952.svg");
+        background:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0), 
+      rgba(0, 0, 0, 0.5)
+    ),
+    /* bottom, image */
+    url("https://upload.wikimedia.org/wikipedia/commons/c/c1/Basketball_court_1952.svg");
     background-position: center;
 }
 
 .baseball{
-    background: url("https://conceptdraw.com/How-To-Guide/picture/Sport-Colored-Baseball-Field-Template.png");
+        background:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.1), 
+      rgba(0, 0, 0, 0.5)
+    ),
+    /* bottom, image */
+    url("https://conceptdraw.com/How-To-Guide/picture/Sport-Colored-Baseball-Field-Template.png");
     background-position: center;
 }
 

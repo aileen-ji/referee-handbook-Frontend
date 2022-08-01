@@ -61,12 +61,14 @@ function TeamGamesGrid() {
 // }}]
   
   return (
+    <><h2 className='recent-games-title'>Recent Games</h2>
     <div className='team-games-grid'>
       {loadingTeamGames ? <h3>Loading most recent games...</h3> :
       <>
         {teamGames.map((item)=> {return <TeamGamesCard team={item}/>})}
       </>}
     </div>
+    </>
   )
 }
 

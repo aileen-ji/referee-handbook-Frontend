@@ -93,11 +93,30 @@ class ApiClient {
         return await this.request({endpoint: `home/${sportName}/${teamId}`, method: `POST`, data: team})
     }
 
+    async getTeams(sportName) {
+        return await this.request({endpoint: `sports/${sportName}/teams`, method: `GET`})
+    }
 
+    async getRecentGame(sportName){
+        return await this.request({endpoint: `sports/${sportName}/recentGame`, method: `GET`})
+    }
 
+    async getNews(sportName){
+        return await this.request({endpoint: `sports/${sportName}/news`, method: `GET`})
+    }
 
+    async getTeamDetail(sportName, teamId){
+        return await this.request({endpoint: `sports/${sportName}/${teamId}`, method: `GET`})
+    }
 
+    async getTeamStats(sportName, teamId){
+        return await this.request({endpoint: `sports/${sportName}/${teamId}/stats`, method: `GET`})
+    }
+
+    async getTeamGames(sportName, teamId){
+        return await this.request({endpoint: `sports/${sportName}/${teamId}/games`, method: `GET`})
+    }
 
 }
 
-export default new ApiClient("https://refereeshandbook.herokuapp.com")
+export default new ApiClient("http://localhost:3001")

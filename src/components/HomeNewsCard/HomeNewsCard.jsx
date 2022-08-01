@@ -45,7 +45,7 @@ function HomeNewsCard(props) {
 
   return (
     <div className='home-news-card'>
-      <a href={props.url}>
+      <a href={props.url} target="_blank">
         <div className='card-grid'>
           <img src={props.imageUrl} className="news-img"></img>
         <h3 className='news-time'>{time}</h3>

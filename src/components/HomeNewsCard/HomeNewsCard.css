@@ -3,9 +3,9 @@
     height: 12.5vh;
     display: grid;
     grid-template-areas:
-        'image image time time time'
-        'image image title title title';
-    grid-template-columns: 20vh 12vh 12vh 20vh 10vh;
+        'image time time'
+        'image title title';
+    grid-template-columns: 40% 30% 30%;
 
     column-gap: 1vh;
     padding: 3px;
@@ -15,8 +15,8 @@
 }
 
 .news-img{
-    width: 27vh;
-    height: 12vh;
+    width: 90%;
+    height: 90%;
     object-fit: cover;
     grid-area: image;
     padding: 5px;
@@ -24,7 +24,7 @@
 
 .news-time{
     grid-area: time;
-    font-size: 1vw;
+    font-size: 15px;
     text-decoration: underline;
 }
 
@@ -33,11 +33,11 @@
     font-weight: 500;
     background-color: white;
     padding: 2px;
+    height: 100%;
 }
 
 .home-news-card{
-    padding: 0.5vh;
-    
+    padding: 0.5
 }
 
 .home-news-card a{

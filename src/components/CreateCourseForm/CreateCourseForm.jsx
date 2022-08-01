@@ -36,6 +36,7 @@ export default function CreateCourseForm() {
     const [error, setError] = useState(null)
     const [isOpen, setIsOpen] = useState(false)
     const [previewIsOpen, setPreviewIsOpen] = useState(false)
+    const [tipsIsOpen, setTipsIsOpen] = useState(false)
 
 
     //handlers for opening and closing our markdown help modal
@@ -48,7 +49,7 @@ export default function CreateCourseForm() {
         setIsOpen(false)
     }
 
-    //handlers for opening and closing our markdown preview modal
+    //handlers for opening and closing our Long description preview modal
     function openPreviewModal (event) {
         event.preventDefault()
         setPreviewIsOpen(true)
@@ -56,6 +57,16 @@ export default function CreateCourseForm() {
 
     function closePreviewModal (event) {
         setPreviewIsOpen(false)
+    }
+
+    //handlers for opening and closing our Tips and Tricks preview modal
+    function openTipsPreviewModal (event) {
+        event.preventDefault()
+        setTipsIsOpen(true)
+    }
+
+    function closeTipsPreviewModal (event) {
+        setTipsIsOpen(false)
     }
 
 
@@ -193,6 +204,15 @@ export default function CreateCourseForm() {
                         </FormControl>
                     </div>
                 </div>
+
+                {/* Open and close modal buttons */}
+                <div className='open-modals'>
+                    <p className='modal-button' onClick={openTipsPreviewModal}><u>Preview Markdown</u></p>
+                </div>
+
+                {/* render components for modals */}
+                <MarkdownPreviewModal content={courseForm.tipsAndTricks} open={tipsIsOpen} onClose={closeTipsPreviewModal} />
+
                 <div className="input-container">
                     <TextField
                     className="input-field"

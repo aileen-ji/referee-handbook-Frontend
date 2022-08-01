@@ -18,15 +18,11 @@
     transition: all .3s ease-in-out;
 }
 
-.nav-links a{
-    text-decoration: none;
-    color: white;
-}
 
 .nav-links{
     display: flex;
     align-items: center;
-}
+} 
 
 .login-register-li {
     display: flex;
@@ -37,4 +33,16 @@
     border-bottom: 2px;
     border-style:outset;
     border-color: #F1D433;
+}
+
+.active{
+    color: #F1D433 !important;
+    border-bottom: 2px;
+    border-style:outset;
+    border-color: #F1D433;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
 }
